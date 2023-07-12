@@ -1,7 +1,9 @@
 from gasp import *
+
+x=0
+y=0
 begin_graphics()
-x=1
-y=1
+
 #such a square
 Line((x+300,y+50),(x+25,y+50), color='#008000')
 Line((x+300,y+188),(x+25,y+188), color='#008000')
@@ -25,3 +27,4 @@ Line((x+130,y+130),(x+195,y+110), color='#ffffff', thickness=7)
 
 update_when('key_pressed')
 end_graphics
+

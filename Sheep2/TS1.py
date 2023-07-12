@@ -4,7 +4,7 @@ print("welcome to the VA lottery")
 q1 = 23, 45, 78 ,94, 35, 76
 print("example " + str(q1))
 ul = []
-print("Please enter your six sets of two digits")
+print("Please enter your six sets of two digits, within the number 40")
 for i in range(0,6):
     ky = int(input())
     ul.append(ky)
@@ -12,7 +12,7 @@ for i in range(0,6):
 print()
 rl = []
 for i in range(0,6):
-    k = randint(10,99)
+    k = randint(10,40)
     rl.append(k)
 print("the winning numbers were " + str(rl))
 
