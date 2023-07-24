@@ -4,13 +4,11 @@ import time
 
 u_x = randint(0, 63)
 u_y = randint(0, 47)
-u_shape = (Circle((5*u_x,5*u_y),10, filled=True, color="#00FF00"))
-
-def place_player():
-  u_shape
 
 def move_player():
   global u_x, u_y, u_shape
+  u_shape = (Circle((5*u_x,5*u_y),10, filled=True, color="#00FF00"))
+
   key = update_when('key_pressed')
   if key == 't':
    u_x += 1
@@ -38,14 +36,15 @@ def move_player():
     u_y += 1
   move_to(u_shape, (Circle((5*u_x,5*u_y),10, filled=True, color="#00FF00")))
 
+def place_player():
+ global u_shape
+
 def pas():
   time.sleep(5)
 
 begin_graphics()  
-finished = False
 place_player()
-while not finished:
-  move_player()
+move_player()
 #key_text = Text("a", (320, 240), size=48)
 
 end_graphics()
