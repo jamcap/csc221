@@ -4,50 +4,48 @@ import time
 
 u_x = randint(0, 63)
 u_y = randint(0, 47)
-
+u_shape = (Circle((5*u_x,5*u_y),10, filled=True, color="#00FF00"))
 
 def place_player():
-    c
+  u_shape
 
 def move_player():
-    global u_x, u_y
-    while True:
-        key = update_when('key_pressed')
-        if key == "1":
-            u_x += 1
-            u_y += 0
-        elif key == '2':
-            u_x += 1
-            u_y += 1
-            if key == '3':
-                u_x += 0
-                u_y += 1
-            if key == '4':
-                u_x -= 1
-                u_y += 1
-            if key == '5':
-                u_x -= 1
-                u_y += 0
-            if key == '6':
-                u_x -= 1
-                u_y -= 1
-            if key == '7':
-                u_x -= 0
-                u_y -= 1
-            if key == '8':
-                u_x += 1
-                u_y += 1
-        move_to(c, (Circle, (10*u_x, 10* u_y), 10,))
-
+  global u_x, u_y, u_shape
+  key = update_when('key_pressed')
+  if key == 't':
+   u_x += 1
+   u_y += 0
+  elif key == 'g':
+    u_x += 1
+    u_y += 1
+  if key == 'b':
+    u_x += 0
+    u_y += 1
+  if key == 'v':
+    u_x -= 1
+    u_y += 1
+  if key == 'c':
+    u_x -= 1
+    u_y += 0
+  if key == 'd':
+    u_x -= 1
+    u_y -= 1
+  if key == 'e':
+    u_x -= 0
+    u_y -= 1
+  if key == 'r':
+    u_x += 1
+    u_y += 1
+  move_to(u_shape, (Circle((5*u_x,5*u_y),10, filled=True, color="#00FF00")))
 
 def pas():
-    time.sleep(5)
+  time.sleep(5)
 
 begin_graphics()  
-c = Circle((10*u_x, 10*u_y),10, filled=True, color="#FFFF00")
-
+finished = False
 place_player()
-move_player()
+while not finished:
+  move_player()
 #key_text = Text("a", (320, 240), size=48)
 
 end_graphics()
