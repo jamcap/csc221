@@ -4,9 +4,10 @@ import time
 
 
 def check_collision():
-  global r_x, r_y, u_x, u_y, finished  
-  if r_x == u_x and r_y == u_y: finished= True
-print("game over")
+  global r_x, r_y, u_x, u_y, finished, done
+  if r_x == u_x and r_y == u_y: finished= True; done = Text("game over", (320, 240), size=48) 
+  pas()
+
 
 def place_player():
   global u_x, u_y, u_shape
@@ -62,6 +63,4 @@ while not finished:
     move_rob()
     check_collision()
  
-#key_text = Text("a", (320, 240), size=48)
-
 end_graphics()
