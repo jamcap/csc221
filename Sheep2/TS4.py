@@ -4,10 +4,10 @@ import time
 
 
 def check_collision():
-  global r_x, r_y, u_x, u_y  
+  global r_x, r_y, u_x, u_y, finished  
   if r_x == u_x and r_y == u_y: finished= True
 print("game over")
-()
+
 def place_player():
   global u_x, u_y, u_shape
   u_x = randint(0, 63)
