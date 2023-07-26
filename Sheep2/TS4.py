@@ -22,11 +22,14 @@ def place_rob():
 
 def move_rob():
   global r_shape, r_x, r_y
-  key = update_when('key_pressed')
   if u_x > r_x: 
     r_x += 1
   elif u_y > r_y:
     r_y += 1
+  elif u_y < r_y: 
+    r_y -= 1
+  elif u_x < r_x:
+    r_x -= 1
   move_to(r_shape, ((10*r_x+5,10*r_y+5)))
 
 def move_player():
